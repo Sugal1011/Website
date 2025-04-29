@@ -1,6 +1,4 @@
-// Simple confirmation that JS is connected
-console.log("sample.js loaded");
-
-window.addEventListener("load", () => {
-  alert("Welcome to farming Exports website!");
-});
+function showOrderMessage() {
+    alert("Still preparing 😅, please don’t order now!");
+  }
+  
