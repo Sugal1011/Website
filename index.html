@@ -3,126 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Novelexporters</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Simple fade-in animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
+  <title>NOVEL Exporters</title>
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
-    .delay-4 { animation-delay: 1.2s; }
-
-    nav ul li a {
-      position: relative;
-    }
-
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: #ffcc00;
-      left: 0;
-      bottom: -4px;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: right;
-    }
-
-    nav ul li a:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="fade-in">
-    <div class="container">
-      <h1>Be Happy 😊🎉</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">🏠 Home</a></li>
-          <li><a href="#about">👨‍🌾 About</a></li>
-          <li><a href="#products">🛒 Products</a></li>
-          <li><a href="#contact">📞 Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section id="home" class="hero fade-in delay-1">
-    <div class="container">
-      <h2>Welcome!!! Your order please 😋</h2>
-      <p>🚚 Your trusted partner in quality exports 🌍</p>
-    </div>
-  </section>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <img src="images/logo.jpg" alt="BeHappy Exporters">
+    <h1>BeHappy</h1>
+    <span class="tag">Curry Leaves Exporters</span>
+  </div>
 
-  <section id="about" class="about fade-in delay-2">
-    <div class="container">
-      <h2>About Us 🧑‍🍳</h2>
-      <p>We are a leading exporter of spices, grains, and delicious ready-to-eat goods with a global footprint 🌶️🌾.</p>
-    </div>
-  </section>
+  <nav>
+    <a href="#" class="active" data-section="home"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#" data-section="about"><i class="fa-solid fa-info-circle"></i> About</a>
+    <a href="#" data-section="products"><i class="fa-solid fa-box-open"></i> Products</a>
+    <a href="#" data-section="contact"><i class="fa-solid fa-phone"></i> Contact</a>
+    <a href="#" data-section="enquiry"><i class="fa-solid fa-envelope-circle-check"></i> Enquiry</a>
+  </nav>
 
-  <section id="products" class="products fade-in delay-3">
-    <div class="container">
-      <h2>Our Products 🍱</h2>
-      <div class="product-list">
-        <div class="product-item">
-          <img src="images/chicken-biryani.jpg" alt="Chicken Biryani" />
-          <h3>🍗 Chicken Biryani</h3>
-          <p>Delicious and authentic chicken biryani packed for export.</p>
-          <button class="order-btn" onclick="showOrderMessage()">Place Order 🛒</button>
-        </div>
-        <div class="product-item">
-          <img src="images/nalla-karam.jpg" alt="Nalla Karam Powder" />
-          <h3>🌶️ Nalla Karam Powder</h3>
-          <p>Spicy and flavorful karam powder made from fresh ingredients.</p>
-          <button class="order-btn" onclick="showOrderMessage()">Place Order 🛒</button>
-        </div>
-        <div class="product-item">
-          <img src="images/Egg_Rice.jpg" alt="Egg Rice" />
-          <h3>🥚 Egg Rice</h3>
-          <p>Savory egg rice, perfect for a quick, tasty meal.</p>
-          <button class="order-btn" onclick="showOrderMessage()">Place Order 🛒</button>
-        </div>
-        <div class="product-item">
-          <img src="images/mushroom_biriyani.jpg" alt="Mushroom Biryani" />
-          <h3>🍄 Mushroom Biryani</h3>
-          <p>Rich and flavorful biryani made with fresh mushrooms.</p>
-          <button class="order-btn" onclick="showOrderMessage()">Place Order 🛒</button>
-        </div>
+  <div class="sidebar-footer">
+    <a class="cta" href="#enquiry" data-section="enquiry"><i class="fa-solid fa-paper-plane"></i> Quick Enquiry</a>
+  </div>
+
+  <!-- New Mini Footer in Sidebar -->
+  <div class="mini-footer">
+    <p class="company-name">Noevel Exporters</p>
+    <p class="address">
+      
+      Coimbatore, Tamil Nadu 642003
+    </p>
+    <p class="contact">
+      <i class="fa-solid fa-phone"></i> +91 00000<br>
+      <i class="fa-solid fa-envelope"></i> yy.com
+    </p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p class="copyright">
+      &copy; 2025 All Rights Reserved
+    </p>
+  </div>
+</aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+  <!-- HOME -->
+<section class="section active" id="home">
+  <div class="hero-slider">
+
+    <!-- Fresh Curry Leaves -->
+    <div class="slider-item active">
+      <img src="images/fresh-curry-leaves.jpg" alt="Fresh Curry Leaves">
+      <div class="slider-caption">
+        <h2>Fresh Premium Curry Leaves</h2>
+        <p>Handpicked from our lush farms at peak freshness, our curry leaves are carefully washed, sorted, and packed to preserve their natural aroma and vibrant green color. Perfect for adding authentic flavor to any dish.</p>
       </div>
     </div>
-  </section>
 
-  <section id="contact" class="contact fade-in delay-4">
-    <div class="container">
-      <h2>Contact Us 📩</h2>
-      <p>Email: 🌐 <a href="mailto:moon@moon.com">moon@moon.com</a></p>
-      <p>Phone: 📱 +91 xxxxxxxxx</p>
+    <!-- Dried Curry Leaves -->
+    <div class="slider-item">
+      <img src="images/dried-curry-leaves.jpg" alt="Dried Curry Leaves">
+      <div class="slider-caption">
+        <h2>Sun-Dried Curry Leaves</h2>
+        <p>Our dried curry leaves are naturally dehydrated under the warm tropical sun to retain their nutrients and signature taste. Ideal for longer storage while keeping the essence of freshly picked leaves.</p>
+      </div>
     </div>
-  </section>
 
-  <footer class="fade-in delay-4">
-    <div class="container">
-      <p>&copy; 2025 Suresh 🚀. All rights reserved.</p>
+    <!-- Curry Leaf Powder -->
+    <div class="slider-item">
+      <img src="images/curry-leaf-powder.jpg" alt="Dry Curry Leaf Powder">
+      <div class="slider-caption">
+        <h2>Finely Ground Curry Leaf Powder</h2>
+        <p>Prepared from our premium dried leaves, this aromatic powder is a convenient way to enrich curries, soups, and sauces. Packed with antioxidants, vitamins, and authentic flavor for kitchens worldwide.</p>
+      </div>
     </div>
-  </footer>
 
+  </div>
+</section>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="about-container">
+        <div class="about-intro">
+          <h2>About BeHappy</h2>
+          <p>With over <strong>15 years</strong> of experience in cultivating and exporting premium curry leaves, we follow sustainable farming and international packaging standards to deliver quality and aroma to kitchens worldwide.</p>
+        </div>
+
+        <!--  <div class="two-column">
+          
+          <div class="card">
+            <h3>Founders</h3>
+            <div class="founder-cards">
+              <div class="founder-card">
+                <img src="images/founder.jpg" alt="Founder">
+                <h4>Ravi Kumar</h4>
+                <p>Founder & CEO</p>
+              </div>
+              <div class="founder-card">
+                <img src="images/cofounder.jpg" alt="Co-Founder">
+                <h4>Priya Sharma</h4>
+                <p>Co-Founder & COO</p>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Team & Packing -->
+          <div class="card">
+            <h3>Team & Packing</h3>
+            <p>We are a team of <strong>50+</strong> professionals across farming, quality, and packaging. Our packing line uses vacuum-sealed and nitrogen-flushed options to retain freshness during long transit.</p>
+            <div class="packing-gallery">
+              <img src="images/packing1.jpg" alt="Packing 1">
+              <img src="images/packing2.jpg" alt="Packing 2">
+              <img src="images/packing3.jpg" alt="Packing 3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Maps & Video -->
+        <div class="two-column">
+          <div class="card">
+            <h3>Our Export Network</h3>
+            <p>We export to clients across India, UAE (Dubai) and the USA. Explore our client locations on the map.</p>
+            <div class="map-card">
+              <!-- MyMaps embed (single map with pins) -->
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1YdmgU7TodsLImE9tIW3R2c3RV69qvd0&ehbc=2E312F"
+                width="100%" height="240" style="border:0;border-radius:8px;" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Our Story in Motion</h3>
+            <video controls poster="images/hero-fresh.jpg" class="video">
+              <source src="images/company-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card company-contact">
+          <h3>Get in Touch</h3>
+          <p><strong>Address:</strong>  Coimbatore, Tamil Nadu, India</p>
+          <p><strong>Email:</strong> <a href="yy.com">info@behappyexporters.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+9100">+91 00</a></p>
+
+          <div class="social-links">
+            <a href="#" target="_blank" class="social linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+      <div class="products-wrap">
+        <h2>Our Curry Leaf Products</h2>
+
+        <div class="product-carousel">
+          <button class="carousel-btn prev-btn" aria-label="Previous product"><i class="fa-solid fa-chevron-left"></i></button>
+
+          <div class="product-card active" data-product="Fresh Curry Leaves">
+            <img src="images/fresh-curry-leaves.jpg" alt="Fresh Curry Leaves">
+            <h3>Fresh Curry Leaves</h3>
+            <p>Farm-fresh, carefully sorted and packed for export.</p>
+            <a href="javascript:void(0);" class="know-more-btn" onclick="openPopup('Fresh Curry Leaves')">Know More</a>
+          </div>
+
+          <div class="product-card" data-product="Dried Curry Leaves">
+            <img src="images/dried-curry-leaves.jpg" alt="Dried Curry Leaves">
+            <h3>Dried Curry Leaves</h3>
+            <p>Sun-dried, aromatic leaves with extended shelf life.</p>
+            <a href="javascript:void(0);" class="know-more-btn" onclick="openPopup('Dried Curry Leaves')">Know More</a>
+          </div>
+
+          <div class="product-card" data-product="Curry Leaf Powder">
+            <img src="images/curry-leaf-powder.jpg" alt="Curry Leaf Powder">
+            <h3>Curry Leaf Powder</h3>
+            <p>Finely ground powder — perfect for seasonings and supplements.</p>
+            <a href="javascript:void(0);" class="know-more-btn" onclick="openPopup('Curry Leaf Powder')">Know More</a>
+          </div>
+
+          <button class="carousel-btn next-btn" aria-label="Next product"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+ <!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <h2>Contact Us</h2>
+  <p class="contact-intro">
+    We'd love to hear from you! Whether you have a question about our products, exports, or anything else —
+    our team is ready to answer all your queries.
+  </p>
+
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info card">
+      <h3>Get in Touch</h3>
+      <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> 
+        <a href="mailto:yy.com">info@behappyexporters.com</a>
+      </p>
+      <p><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong> Coimbatore, Tamil Nadu, India</p>
+      <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> 
+        <a href="tel:+900">+91 0000</a>
+      </p>
+
+      <div class="social-links">
+        <a href="#" class="social linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container card">
+      <iframe title="Company location"
+        src="https://www.google.com/maps/d/u/0/embed?mid=15mB7eieBQBVkeFk_g_d2bkmyNL_QUDA&ehbc=2E312F"
+        width="100%" height="300" style="border:0;border-radius:8px;" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+
+    <!-- QUICK ENQUIRY (separate tab also) -->
+    <section class="section" id="enquiry">
+      <div class="card">
+        <h2>Quick Enquiry</h2>
+        <form id="quickEnquiryForm" class="enquiry-form">
+          <label>Name*</label>
+          <input type="text" name="name" required>
+          <label>Email*</label>
+          <input type="email" name="email" required>
+          <label>Phone</label>
+          <input type="tel" name="phone">
+          <label>Message*</label>
+          <textarea name="message" rows="4" required></textarea>
+          <button type="submit" class="cta">Send Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- POPUP OVERLAY (enquiry triggered by Know More) -->
+<div id="enquiryPopup" class="popup-overlay" aria-hidden="true">
+  <div class="popup-content">
+    <button class="close-btn" aria-label="Close" onclick="closePopup()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h3>Product Enquiry</h3>
+    <form id="productEnquiryForm" action="mailto:support@novel.com" method="post" enctype="text/plain">
+      
+      <label>Product</label>
+      <input id="popupProduct" name="Product" readonly>
+
+      <label>Your Name*</label>
+      <input name="Name" type="text" placeholder="Enter your full name" required>
+
+      <label>Email*</label>
+      <input name="Email" type="email" placeholder="you@example.com" required>
+
+      <label>Mobile</label>
+      <input name="Mobile" type="tel" placeholder="Optional">
+
+      <label>Message*</label>
+      <textarea name="Message" rows="4" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="popup-submit">
+        <i class="fa-solid fa-paper-plane"></i> Send Enquiry
+      </button>
+    </form>
+  </div>
+</div>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
